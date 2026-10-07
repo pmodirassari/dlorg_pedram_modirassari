@@ -3,11 +3,14 @@
 DOWNLOADS="/home/pmodirassari/Downloads"
 
 for file in "$DOWNLOADS"/*; do
+
+if [[ -f "$file" ]]; then
+
     if [[ $file == *.txt || $file == *.md || $file == *.doc ]]; then
         mkdir -p "$DOWNLOADS/Textfiles"
         mv "$file" "$DOWNLOADS/Textfiles"
 
-    elif [[ $file == *.png || $file == *.jpg ]]; then 
+    elif [[ $file == *.png || $file == *.jpg || *.raw ]]; then 
         mkdir -p "$DOWNLOADS/Images"
         mv "$file" "$DOWNLOADS/Images"
     
@@ -31,6 +34,7 @@ for file in "$DOWNLOADS"/*; do
         mkdir -p "$DOWNLOADS/Misc_unknown_file_types"
         mv "$file" "$DOWNLOADS/Misc_unknown_file_types"
     fi
+fi
 done
 
 
