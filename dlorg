@@ -1,4 +1,41 @@
 #!/usr/bin/env bash
 
+DOWNLOADS="/home/pmodirassari/Downloads"
+
+for file in "$DOWNLOADS"/*; do
+    if [[ $file == *.txt || $file == *.md || $file == *.doc ]]; then
+        mkdir -p "$DOWNLOADS/Textfiles"
+        mv "$file" "$DOWNLOADS/Textfiles"
+
+    elif [[ $file == *.png || $file == *.jpg ]]; then 
+        mkdir -p "$DOWNLOADS/Images"
+        mv "$file" "$DOWNLOADS/Images"
+    
+    elif [[ $file == *.avi || $file == *.wmv || $file == *.mp4 ]]; then 
+        mkdir -p "$DOWNLOADS/Videos"
+        mv "$file" "$DOWNLOADS/Videos"
+
+    elif [[ $file == *.pdf ]]; then 
+        mkdir -p "$DOWNLOADS/PDFs"
+        mv "$file" "$DOWNLOADS/PDFs"
+
+    elif [[ $file == *.pptx ]]; then
+        mkdir -p "$DOWNLOADS/Presentations"
+        mv "$file" "$DOWNLOADS/Presentations"
+
+    elif [[ $file == *.wav || $file == *.mp3 ]]; then
+        mkdir -p "$DOWNLOADS/Sound_files"
+        mv "$file" "$DOWNLOADS/Sound_files"
+
+    else
+        mkdir -p "$DOWNLOADS/Misc_unknown_file_types"
+        mv "$file" "$DOWNLOADS/Misc_unknown_file_types"
+    fi
+done
+
+
+
+
+
 
 
