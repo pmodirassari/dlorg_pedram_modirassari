@@ -9,4 +9,7 @@ Task 0 - warm-up:
 Task 1 - the Download Organizer
   1. I created random files by touch text{1..4}.txt camera{1..4].raw paint{1..3}.jpg film{1..4}.avi video{1..2}.wmv song{a,b,c,d}.mp3 soundclip{1..4}.wav scanned{1..4}.pdf present{1..3}.pptx
   d<img width="653" height="187" alt="Screenshot 2026-10-06 123204" src="https://github.com/user-attachments/assets/bd555e75-8e03-4136-9d85-582d3f2e7dc6" />
-  2. 
+  2. Wrote script after reviewing bash conditionals and bash loops. Went for case first but changed it to if later. Hade some problems getting the different files on the same row because I used | as a seperator, but I then found with the help if LLM that in the case of case its one | and in the case of if it's two ||'s.
+  3. I run the script and after correcting a few typos I got it to work
+     <img width="1285" height="945" alt="Screenshot 2026-10-07 132204" src="https://github.com/user-attachments/assets/df0445f0-b160-4d13-8806-5c0934f81228" />
+
