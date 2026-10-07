@@ -1,42 +1,40 @@
 #!/usr/bin/env bash
 
-DOWNLOADS="/home/pmodirassari/Downloads"
+SRC="$HOME/Downloads"
 
-for file in "$DOWNLOADS"/*; do
+for file in "$SRC"/*; do
 
-if [[ -f "$file" ]]; then
+    [[ -f "$file" ]] || continue
 
-    if [[ $file == *.txt || $file == *.md || $file == *.doc ]]; then
-        mkdir -p "$DOWNLOADS/Textfiles"
-        mv "$file" "$DOWNLOADS/Textfiles"
+    if [[ "$file" == *.txt || "$file" == *.md || "$file" == *.doc ]]; then
+        mkdir -p "$SRC/Textfiles"
+        mv "$file" "$SRC/Textfiles"
 
-    elif [[ $file == *.png || $file == *.jpg || *.raw ]]; then 
-        mkdir -p "$DOWNLOADS/Images"
-        mv "$file" "$DOWNLOADS/Images"
+        elif [[ "$file" == *.png || "$file" == *.jpg || "$file" == *.raw ]]; then 
+        mkdir -p "$SRC/Images"
+        mv "$file" "$SRC/Images"
     
-    elif [[ $file == *.avi || $file == *.wmv || $file == *.mp4 ]]; then 
-        mkdir -p "$DOWNLOADS/Videos"
-        mv "$file" "$DOWNLOADS/Videos"
+    elif [[ "$file"  == *.avi || "$file" == *.wmv || "$file" == *.mp4 ]]; then 
+        mkdir -p "$SRC/Videos"
+        mv "$file" "$SRC/Videos"
 
-    elif [[ $file == *.pdf ]]; then 
-        mkdir -p "$DOWNLOADS/PDFs"
-        mv "$file" "$DOWNLOADS/PDFs"
+    elif [[ "$file" == *.pdf ]]; then 
+        mkdir -p "$SRC/PDFs"
+        mv "$file" "$SRC/PDFs"
 
-    elif [[ $file == *.pptx ]]; then
-        mkdir -p "$DOWNLOADS/Presentations"
-        mv "$file" "$DOWNLOADS/Presentations"
+    elif [[ "$file" == *.pptx ]]; then
+        mkdir -p "$SRC/Presentations"
+        mv "$file" "$SRC/Presentations"
 
-    elif [[ $file == *.wav || $file == *.mp3 ]]; then
-        mkdir -p "$DOWNLOADS/Sound_files"
-        mv "$file" "$DOWNLOADS/Sound_files"
+    elif [[ "$file" == *.wav || "$file" == *.mp3 ]]; then
+        mkdir -p "$SRC/Sound_files"
+        mv "$file" "$SRC/Sound_files"
 
     else
-        mkdir -p "$DOWNLOADS/Misc_unknown_file_types"
-        mv "$file" "$DOWNLOADS/Misc_unknown_file_types"
+        mkdir -p "$SRC/Misc_unknown_file_types"
+        mv "$file" "$SRC/Misc_unknown_file_types"
     fi
-fi
 done
-
 
 
 
