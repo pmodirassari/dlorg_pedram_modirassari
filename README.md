@@ -15,8 +15,11 @@ Task 1-2 - the Download Organizer
 
 Task 3-4
   1. I placed a link to my script in .local/bin, then created a service and a unit-file with dlorg.service in .config/systemd so that the script will get started after every re-boot. I followed the instructions from class (with "sudo systemctl daemon-reload, enabling and starting) but I had to come up with a way for it not to only be "oneshot", but be running continuously. So I asked LLM for the command to substitute "oneshot", and it gave me the suggestion of making a dlorg.path file with similar structure as the dlorg.service. I hence went through the same procedure with this file > dameon-reload > enable > start). And now I think everything works as it should. I have tested creating and moving in files of different types into the Downloads-folder and they all get placed automatically where they should.
-     <img width="681" height="668" alt="Screenshot 2026-10-08 111130" src="https://github.com/user-attachments/assets/bf1d9ef1-e8df-4780-b713-4a930df90bc6" />
-<img width="670" height="667" alt="Screenshot 2026-10-08 110611" src="https://github.com/user-attachments/assets/1333ab34-98c3-4f53-ab4e-5613df8e3a8d" />
-<img width="723" height="950" alt="Screenshot 2026-10-08 105344" src="https://github.com/user-attachments/assets/b287cfe7-4439-432c-bfbc-5ba06913cf87" />
 <img width="525" height="998" alt="Screenshot 2026-10-07 153049" src="https://github.com/user-attachments/assets/71f8aa4b-895e-4487-8a75-8840aca70f3f" />
-  
+
+<img width="723" height="950" alt="Screenshot 2026-10-08 105344" src="https://github.com/user-attachments/assets/b287cfe7-4439-432c-bfbc-5ba06913cf87" />
+
+<img width="670" height="667" alt="Screenshot 2026-10-08 110611" src="https://github.com/user-attachments/assets/1333ab34-98c3-4f53-ab4e-5613df8e3a8d" />
+
+<img width="681" height="668" alt="Screenshot 2026-10-08 111130" src="https://github.com/user-attachments/assets/bf1d9ef1-e8df-4780-b713-4a930df90bc6" />
+
